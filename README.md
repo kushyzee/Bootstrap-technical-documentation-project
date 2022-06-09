@@ -57,7 +57,7 @@ The following guidelines were provided:
 
 ### Links
 
-- Live Site URL: [preview website](https://your-live-site-url.com)
+- Live Site URL: [preview website](https://kushyzee.github.io/Bootstrap-technical-documentation-project/)
 
 ## My process
 
