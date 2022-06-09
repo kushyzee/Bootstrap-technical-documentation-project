@@ -1,0 +1,264 @@
+/* CSS GLOBAL RESET */
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+Remove default margin
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+    list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+    scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+    min-height: 100vh;
+    text-rendering: optimizeSpeed;
+    line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+    max-width: 100%;
+    display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    html:focus-within {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+}
+
+
+/* VARIABLES */
+:root {
+    --primary-color: rgb(6,38,25);
+    --primary-two: rgb(133,11,59);
+    --accent-one: rgb(123,224,184);
+    --accent-two: rgb(254,127,174);
+    --link-color: rgb(5, 85, 53);
+
+}
+
+
+/* MAIN STYLING COMPONENTS */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    /* max-width: 750px; */
+    /* padding: 1em; */
+    margin: 0 auto;
+
+    font-size: 1.6rem;
+    font-family: Roboto, sans-serif;
+
+    color: rgb(60, 60, 60);
+}
+
+.sub-header {
+    margin-bottom: .5em;
+
+    font-size: 2.2rem;
+    font-weight: 700;
+
+    color: var(--primary-color);
+}
+
+.top-header {
+    margin-bottom: 1.5em;
+    background-color: rgb(17,48,36);
+}
+
+#navbar>header {
+    padding: .8em 1.3em .8em;
+    line-height: 1.2;
+
+    font-size: 2.4rem;
+    font-weight: 900;
+    
+    background-color: var(--primary-color);
+    color: var(--accent-one);
+}
+
+#navbar a {
+    display: block;
+
+    border-bottom: 2px solid rgba(0, 0, 0, .4);
+    border-top: 1px solid rgba(0, 0, 0,.2);
+    padding-left: 2em ;
+    line-height: 50px;
+
+    text-decoration: none;
+    font-weight: 500;
+
+    color: rgba(255, 255, 255, .8);
+
+    transition: all .2s linear;
+}
+
+#navbar a:hover {
+    border-left: 4px solid var(--accent-two);
+    padding-left: 2.2em;
+
+    color: var(--accent-one);
+
+    font-weight: 600;
+}
+
+#navbar a:active {
+    border-left: 4px solid var(--accent-two);
+    padding-left: 2.2em;
+    
+    font-weight: 600;
+    
+    color: var(--accent-one);
+}
+
+/* MAIN SECTION STYLING */
+.main-section {
+    box-shadow: 0px 1px 2px rgba(0, 0, 0, .2);
+    
+    padding: 1em 2em 2em;
+    margin: 0 auto;
+}
+
+.main-section h3 {
+    margin: 1.5em 0 .2em;
+
+    font-size: 2rem;
+    font-weight: 500;
+
+    color: black;
+}
+
+.main-section a:not(.button) {
+    text-decoration: none;
+    color: var(--link-color);
+}
+
+code {
+    color: var(--primary-two);
+}
+
+.codeblock {
+    background-color: rgba(0, 0, 0, .05);
+
+    padding: .8em;
+    margin: 1em 1em 0;
+    overflow: auto;
+}
+
+/* RESETING THE MARGIN IN THE LIST ITEMS IN INTRODUCTION SECTION */
+#components {
+    margin-bottom: 0;
+}
+
+.button {
+    display: inline-block;
+
+    margin-top: 1em;
+    padding: .5em .8em;
+    border-radius: 5px;
+    text-decoration: none;
+
+    background-color: var(--primary-two);
+    color: white;
+
+    transition: all .2s linear;
+}
+
+.button:hover {
+    transform: scale(1.05);
+}
+
+
+/* MEDIA QUERY */
+@media (min-width: 64em) {
+    body {
+        position: relative;
+
+        max-width: 2000px;
+        width: 100%;
+    }
+
+    .top-header {
+        position: fixed;
+        top: 0;
+        left: 0;
+
+        width: 380px;
+        height: 100%;
+    }
+
+    #main-doc {
+        width: 100%;
+        overflow: auto;
+    }
+
+    .sub-header {
+        font-size: 2.4rem;
+        margin-bottom: .2em;
+    }
+
+    #navbar>header {
+        font-size: 2.6rem;
+    }
+
+    #navbar a {
+        font-size: 1.8rem;
+    }
+
+    .main-section {
+        margin-left: 380px;
+        padding: 2em 3em;
+    }
+
+}
