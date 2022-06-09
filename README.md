@@ -57,8 +57,7 @@ The following guidelines were provided:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Live Site URL: [preview website](https://your-live-site-url.com)
 
 ## My process
 
@@ -77,12 +76,12 @@ I ran into a problem where I couldn't figure out how to fix the sidebar to the l
   position: fixed;
   top: 0;
   left: 0;
-  width: 350px;
+  width: 380px;
   height: 100%;
 }
 ```
 
-That seemed to do the trick. I gave a `margin-left: 360px` to the other items to push them to the right of the sidebar with adequate spacing in between
+That seemed to do the trick. I gave a `margin-left: 380px` to the other items to push them to the right of the sidebar with adequate spacing in between
 
 2. Another problem came up where the rest of the items not in the sidebar stretched out completely and there was a horizontal overflow with sidebar. I tried various method to make it responsive and after close to an hour of trying, I figured it out. I assumed it was because I added the `margin-left: 360px` to the main container holding all the `<section>`s that is causing it, so i removed it and added it to individual `<section>`s instead and it worked. I also tried wrapping all the `<section>` element in another container and that also worked
 
